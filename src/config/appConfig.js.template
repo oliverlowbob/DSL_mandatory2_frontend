@@ -1,0 +1,14 @@
+const appConfig = {
+	port: 3000,
+	sessionConfig: {
+		secret: "secret",
+		resave: false,
+		saveUninitialized: true
+	},
+	rateLimitConfig: {
+		windowMs: 15 * 60 * 1000,
+		max: 10
+	}
+}
+
+module.exports = appConfig;
