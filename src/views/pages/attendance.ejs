@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<body>
+    <main class="container">
+        <h1>Skoleprotokol</h1>
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>E-mail</th>
+                    <th>Active</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% students.forEach(student => { %>
+                <tr>
+                    <td><%= student.firstName %></td>
+                    <td><%= student.lastName %></td>
+                    <td><%= student.email %></td>
+                    <td><%= student.active %></td>
+                    <td><%= //attendance procent her %></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+
+    <%- include('../partials/footer'); %>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Skoleprotokol</h1>
+        <div class="z-depth-4" style="max-width: 340px; padding: 45px; margin: 120px auto;">
+            <form>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="key" type="text" class="validate" required>
+                        <label for="key">Attendance key</label>
+                    </div>
+                </div>
+
+                <button class="btn waves-effect waves-light" type="submit" name="action" style="width: 100%; background-color: #60a3bc">Register
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <%- include('../partials/footer'); %>
+</body>
+
+</html>

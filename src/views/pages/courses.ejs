@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<body>
+    <main class="container">
+        <h1>Skoleprotokol</h1>
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% courses.forEach(course => { %>
+                <tr>
+                    <td><a href="/courses/<%= course.id %>"><%= course.name %></a></td>
+                    <td><a href="/courses/<%= course.id %>/attendance"></a></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+
+    <%- include('../partials/footer'); %>
+</body>
+
+</html>

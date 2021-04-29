@@ -1,11 +1,21 @@
-<footer>
-    
-</footer>
+<footer class="page-footer" style="background-color: #60a3bc;">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Skoleprotokol</h5>
+          <p class="grey-text text-lighten-4">Så møder dine elever faktisk op</p>
+        </div>
+        <div class="col l2 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="/contact">Kontakt</a></li>
+            <li><a class="grey-text text-lighten-3" href="/about">Om os</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>             
 
-<!--Container div-->
-</div>
-
-<!--ejs to load other defined scripts-->
 <% if (typeof scripts != "undefined") { %>
     <% scripts.forEach(function(script) { %>
         <script src="<%= script %>"></script>
@@ -15,10 +25,4 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" 
     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
     crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
-    crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
