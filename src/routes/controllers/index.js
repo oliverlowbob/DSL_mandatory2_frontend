@@ -8,6 +8,11 @@ router.get('/', (req, res) => {
     return res.render('pages/register');
 });
 
+router.get('/logout', (req, res) => {
+    // TODO: clear session
+    return res.redirect('/login');
+});
+
 router.get('/test', (req, res) => {
     return res.render('pages/attendance', {
         students: [

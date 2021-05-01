@@ -9,6 +9,7 @@
   "author": "Andreas Dan Petersen, Wajid Ahmad, Oliver Dehnfjeld, Jonas Hansen, Frederik Lundbeck Jørgensen",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-session": "^1.17.1"

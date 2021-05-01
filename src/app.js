@@ -25,6 +25,9 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use(require('./routes/controllers/classes'));
+app.use(require('./routes/controllers/courses'));
+
 
 // starts the http server & listens for connections
 app.listen(appConfig.port, (error) => {
