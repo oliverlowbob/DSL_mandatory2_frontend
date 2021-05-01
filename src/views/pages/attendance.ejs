@@ -10,15 +10,15 @@
         <%- include('../partials/header'); %>
     </header>
     <main class="container">
-        <h3>Attendance</h3>
+        <h3>Attendance overview</h3>
         <table class="striped">
             <thead>
                 <tr>
                     <th>Firstname</th>
                     <th>Lastname</th>
                     <th>E-mail</th>
-                    <th>Active</th>
-                    <th>Attendance</th>
+                    <th>Key</th>
+                    <th>Present</th>
                 </tr>
             </thead>
 
@@ -28,8 +28,8 @@
                     <td><%= student.firstName %></td>
                     <td><%= student.lastName %></td>
                     <td><%= student.email %></td>
-                    <td><%= student.active %></td>
-                    <td><%= //attendance procent her %></td>
+                    <td><%= student.key %></td>
+                    <td id="<%= student.key %>"><%= student.present %></td>
                 </tr>
                 <% }); %>
             </tbody>
