@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 
@@ -15,24 +17,13 @@ app.use(session(appConfig.sessionConfig));
 
 // route configuration
 app.use(require('./routes/controllers/index'));
-
-// middleware route for verifying user is logged in
-app.use((req, res, next) => {
-	if (!req.session.user) {
-		// redirect the user to index page
-        return res.redirect('/');
-    }
-    next();
-});
-
 app.use(require('./routes/controllers/classes'));
 app.use(require('./routes/controllers/courses'));
 
-
 // starts the http server & listens for connections
-app.listen(appConfig.port, (error) => {
+app.listen(process.env.SERVER_PORT, (error) => {
 	if (error) {
 		console.error(error)
 	}
-	console.log('HTTP server started on port', appConfig.port);
+	console.log('HTTP server started on port', process.env.SERVER_PORT);
 });

@@ -1,7 +1,6 @@
 const appConfig = {
-	port: 3000,
 	sessionConfig: {
-		secret: "secret",
+		secret: process.env.SESSiON_SECRET,
 		resave: false,
 		saveUninitialized: true
 	},
