@@ -23,7 +23,7 @@
                 <% courses.forEach(course => { %>
                 <tr>
                     <td><a href="/courses/<%= course.id %>"><%= course.name %></a></td>
-                    <td><a href="/courses/<%= course.id %>/attendance">See attendance</a></td>
+                    <td><a href="/courses/<%= course.id %>/attendance" disabled>See attendance</a></td>
                 </tr>
                 <% }); %>
             </tbody>
