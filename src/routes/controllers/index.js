@@ -20,7 +20,10 @@ router.post('/login', async (req, res) => {
         }
     });
 
-    req.session.token = response.headers['x-auth-token'];
+    if (res.statusCode == 200) {
+        req.session.token = response.data['access_token'];  
+        return res.status(200).send(req.session.token); 
+    }
 });
 
 router.get('/', (req, res) => {
@@ -35,7 +38,7 @@ router.post('/register', async (req, res) => {
         url: process.env.BACKEND_SERVER + '/attendancekey/validate/' + key
     });
 
-    if (response.status == 200) {
+    if (response.statusCode == 200) {
         
     }
 });
