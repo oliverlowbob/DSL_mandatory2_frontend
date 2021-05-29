@@ -17,17 +17,6 @@ app.use(session(appConfig.sessionConfig));
 
 // route configuration
 app.use(require('./routes/controllers/index'));
-
-// middleware route for verifying user is logged in
-app.use((req, res, next) => {
-	// check that jsonwebtoken is stored in session
-	if (!req.session.token) {
-		// redirect the user to index page
-        return res.redirect('/');
-    }
-    next();
-});
-
 app.use(require('./routes/controllers/classes'));
 app.use(require('./routes/controllers/courses'));
 

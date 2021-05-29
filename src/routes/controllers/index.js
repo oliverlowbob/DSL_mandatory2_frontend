@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const axios = require('axios');
 
+const auth = require('../../helpers/authentication.js');
+
 router.get('/login', (req, res) => {
     return res.render('pages/index');
 });
@@ -43,7 +45,7 @@ router.post('/register', async (req, res) => {
     }
 });
 
-router.get('/logout', (req, res) => {
+router.get('/logout', auth.tokenVerification, (req, res) => {
     delete req.session.token;
     return res.redirect('/login');
 });
