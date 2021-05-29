@@ -41,7 +41,9 @@ router.post('/register', async (req, res) => {
     });
 
     if (response.statusCode == 200) {
-        
+        res.render('pages/200');
+    } else {
+        res.render('pages/400');
     }
 });
 
