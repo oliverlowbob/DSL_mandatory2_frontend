@@ -25,11 +25,15 @@
             <tbody>
                 <% students.forEach(student => { %>
                 <tr>
-                    <td><%= student.firstName %></td>
-                    <td><%= student.lastName %></td>
-                    <td><%= student.email %></td>
-                    <td><%= student.key %></td>
-                    <td id="<%= student.key %>"><%= student.present %></td>
+                    <td><%= student.user.firstName %></td>
+                    <td><%= student.user.lastName %></td>
+                    <td><%= student.user.email %></td>
+                    <td><%= student.value %></td>
+                    <% if (student.present) { %>
+                    <td>&#10004</td>
+                    <% } else { %>
+                    <td>&#10005</td>
+                    <% } %>
                 </tr>
                 <% }); %>
             </tbody>

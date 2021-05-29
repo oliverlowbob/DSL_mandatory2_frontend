@@ -16,14 +16,14 @@ router.post('/login', async (req, res) => {
 
     const response = await axios({
         method: 'post',
-        url: process.env.BACKEND_SERVER + '/api/auth/authenticate',
+        url: process.env.BACKEND_SERVER + '/authenticate',
         data: {
             email, password
         }
     });
 
-    if (res.statusCode == 200) {
-        req.session.token = response.data['access_token'];  
+    if (response.status == 200) {
+        req.session.token = response.data.access_token;  
         return res.status(200).send(req.session.token); 
     }
 });

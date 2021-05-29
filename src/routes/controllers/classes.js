@@ -12,8 +12,8 @@ router.get('/classes/:id', auth.tokenVerification, async (req, res) => {
         }
     });
 
-    res.render('pages/course', {
-        classes: response.data.classes
+    res.render('pages/attendance', {
+        students: response.data
     });
 });
 
