@@ -14,9 +14,10 @@
         <table class="striped">
             <thead>
                 <tr>
+                    <th>Class</th>
+                    <th>Number of class</th>
                     <th>Starting time</th>
                     <th>End time</th>
-                    <th>#</th>
                     <th>Attendance</th>
                 </tr>
             </thead>
@@ -24,9 +25,10 @@
             <tbody>
                 <% classes.forEach(selectedClass => { %>
                 <tr>
+                    <td><%= selectedClass.course.name %></td>
+                    <td><%= selectedClass.numberOfClass %></td>
                     <td><%= selectedClass.start %></td>
                     <td><%= selectedClass.end %></td>
-                    <td><%= selectedClass.numberOfClass %></td>
                     <td><a href="/classes/<%= selectedClass.id %>">Generate keys</a></td>
                 </tr>
                 <% }); %>
