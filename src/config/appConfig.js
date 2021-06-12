@@ -1,6 +1,6 @@
 const appConfig = {
 	sessionConfig: {
-		secret: process.env.SESSiON_SECRET,
+		secret: process.env.SESSION_SECRET,
 		resave: false,
 		saveUninitialized: true
 	},
