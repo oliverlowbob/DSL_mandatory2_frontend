@@ -13,6 +13,8 @@ const appConfig = require('./config/appConfig');
 
 // setup & configure express-session
 const session = require('express-session');
+console.log("appconfig", appConfig.sessionConfig);
+console.log("env", process.env);
 app.use(session(appConfig.sessionConfig));
 
 // route configuration
